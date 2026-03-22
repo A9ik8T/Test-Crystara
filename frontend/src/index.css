@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Crystara Design System - Mystical Crystal E-commerce */
+
+@layer base {
+  :root {
+    /* Light Mode - Clean white with subtle mystical touches */
+    --background: 0 0% 98%;
+    --foreground: 270 30% 15%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 270 30% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 30% 15%;
+
+    /* Primary - Deep Amethyst Purple */
+    --primary: 270 50% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Rose Quartz Pink */
+    --secondary: 340 30% 95%;
+    --secondary-foreground: 340 40% 30%;
+
+    /* Muted - Soft gray */
+    --muted: 270 10% 92%;
+    --muted-foreground: 270 10% 45%;
+
+    /* Accent - Celestial Gold */
+    --accent: 42 80% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 270 10% 88%;
+    --input: 270 10% 88%;
+    --ring: 270 50% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Crystal Colors */
+    --crystal-amethyst: 270 50% 55%;
+    --crystal-rose: 340 50% 75%;
+    --crystal-citrine: 42 80% 55%;
+    --crystal-obsidian: 270 30% 20%;
+    --crystal-quartz: 0 0% 15%;
+    --crystal-moonstone: 220 30% 90%;
+
+    /* Gradients */
+    --gradient-mystic: linear-gradient(135deg, hsl(270 50% 50%), hsl(340 50% 55%), hsl(42 80% 55%));
+    --gradient-aurora: linear-gradient(180deg, hsl(270 10% 96%), hsl(340 20% 97%), hsl(270 10% 98%));
+    --gradient-crystal: linear-gradient(135deg, hsl(270 50% 55% / 0.05), hsl(340 50% 75% / 0.05));
+    --gradient-gold: linear-gradient(135deg, hsl(42 70% 50%), hsl(35 80% 60%));
+
+    /* Shadows */
+    --shadow-crystal: 0 4px 30px -5px hsl(270 50% 50% / 0.15);
+    --shadow-glow: 0 0 40px -10px hsl(270 50% 55% / 0.3);
+    --shadow-gold: 0 4px 20px -5px hsl(42 80% 55% / 0.2);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 270 30% 15%;
+    --sidebar-primary: 270 50% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 10% 95%;
+    --sidebar-accent-foreground: 270 30% 15%;
+    --sidebar-border: 270 10% 88%;
+    --sidebar-ring: 270 50% 50%;
+  }
+
+  .dark {
+    /* Dark Mode - Rich dark with mystical glow */
+    --background: 270 15% 8%;
+    --foreground: 0 0% 95%;
+
+    /* Card surfaces */
+    --card: 270 15% 12%;
+    --card-foreground: 0 0% 95%;
+
+    /* Popover */
+    --popover: 270 15% 14%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Deep Amethyst Purple */
+    --primary: 270 50% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Rose Quartz Pink */
+    --secondary: 340 25% 18%;
+    --secondary-foreground: 340 40% 85%;
+
+    /* Muted - Soft dark gray */
+    --muted: 270 15% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Accent - Celestial Gold */
+    --accent: 42 80% 55%;
+    --accent-foreground: 0 0% 0%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 270 15% 22%;
+    --input: 270 15% 22%;
+    --ring: 270 50% 60%;
+
+    /* Custom Crystal Colors */
+    --crystal-amethyst: 270 50% 55%;
+    --crystal-rose: 340 50% 75%;
+    --crystal-citrine: 42 80% 55%;
+    --crystal-obsidian: 270 30% 12%;
+    --crystal-quartz: 0 0% 95%;
+    --crystal-moonstone: 220 30% 90%;
+
+    /* Gradients */
+    --gradient-mystic: linear-gradient(135deg, hsl(270 50% 60%), hsl(340 50% 55%), hsl(42 80% 55%));
+    --gradient-aurora: linear-gradient(180deg, hsl(270 15% 10%), hsl(270 15% 12%), hsl(270 15% 8%));
+    --gradient-crystal: linear-gradient(135deg, hsl(270 50% 55% / 0.1), hsl(340 50% 75% / 0.1));
+    --gradient-gold: linear-gradient(135deg, hsl(42 70% 50%), hsl(35 80% 60%));
+
+    /* Shadows */
+    --shadow-crystal: 0 4px 30px -5px hsl(270 50% 60% / 0.25);
+    --shadow-glow: 0 0 40px -10px hsl(270 50% 55% / 0.5);
+    --shadow-gold: 0 4px 20px -5px hsl(42 80% 55% / 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 270 15% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 270 50% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 15% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 270 15% 22%;
+    --sidebar-ring: 270 50% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-mystic {
+    background: var(--gradient-mystic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-aurora {
+    background: var(--gradient-aurora);
+  }
+
+  .bg-gradient-crystal {
+    background: var(--gradient-crystal);
+  }
+
+  .shadow-crystal {
+    box-shadow: var(--shadow-crystal);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        hsl(0 0% 100% / 0.2),
+        transparent);
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 200%;
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glow-pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(270 50% 55% / 0.3);
+    }
+
+    50% {
+      box-shadow: 0 0 40px hsl(270 50% 55% / 0.6);
+    }
+  }
+}
